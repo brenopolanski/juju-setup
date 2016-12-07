@@ -9,7 +9,7 @@ answer=$(zenity  --list  --text "Choose the packages you want to install." --che
   TRUE "1" "Juju" ""\
   TRUE "2" "LXD" "A hypervisor for LXC, providing fast, secure containers."\
   TRUE "3" "ZFS Utils" "A highly efficient and feature-rich filesystem and logical volume manager."\
-  FALSE "4" "Create Juju environment variable" ""\
+  FALSE "4" "Create Juju environment variables" ""\
   FALSE "5" "Charm Tools" "The Charm Tools Juju Plugin is a collection of commands enabling users and charm authors to create, search, fetch, update, and manage charms."\
   FALSE "6" "Juju Plugins" "Collection of plugins created by various authors to make using Juju easier."\
   --separator=":" --width=750 --height=700)
