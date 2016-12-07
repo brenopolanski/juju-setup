@@ -1,6 +1,6 @@
 # [Juju](https://jujucharms.com/) Setup
 
-> Simple script for installing Juju tools on Ubuntu environment
+> Simple script for installing Juju tools on Ubuntu environment.
 
 ## Preview:
 
