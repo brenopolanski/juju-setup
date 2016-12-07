@@ -6,9 +6,9 @@
 zenity --info --title "Juju SETUP" --text "This is a simple script for installing Juju tools on Ubuntu environment. \n\nCreated by: Breno Polanski <breno.polanski@gmail.com>"
 
 answer=$(zenity  --list  --text "Choose the packages you want to install." --checklist  --column "Install" --column "Id" --column "Package" --column "Description"\
-  TRUE "1" "Juju" ""\
-  TRUE "2" "LXD" "A hypervisor for LXC, providing fast, secure containers."\
-  TRUE "3" "ZFS Utils" "A highly efficient and feature-rich filesystem and logical volume manager."\
+  FALSE "1" "Juju" ""\
+  FALSE "2" "LXD" "A hypervisor for LXC, providing fast, secure containers."\
+  FALSE "3" "ZFS Utils" "A highly efficient and feature-rich filesystem and logical volume manager."\
   FALSE "4" "Create Juju environment variables" ""\
   FALSE "5" "Charm Tools" "The Charm Tools Juju Plugin is a collection of commands enabling users and charm authors to create, search, fetch, update, and manage charms."\
   FALSE "6" "Juju Plugins" "Collection of plugins created by various authors to make using Juju easier."\
