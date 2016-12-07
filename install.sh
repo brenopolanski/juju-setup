@@ -26,7 +26,6 @@ fi
 
 if [[ $answer =~ "3" ]]; then
   sudo apt-get -y install lxd
-  sudo apt-get -y install lxd
   sudo newgrp lxd
   sudo lxd init
 fi
