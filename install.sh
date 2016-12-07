@@ -11,6 +11,7 @@ answer=$(zenity  --list  --text "Choose the packages you want to install." --che
   TRUE "3" "ZFS Utils" "A highly efficient and feature-rich filesystem and logical volume manager."\
   FALSE "4" "Create Juju environment variable" ""\
   FALSE "5" "Charm Tools" "The Charm Tools Juju Plugin is a collection of commands enabling users and charm authors to create, search, fetch, update, and manage charms."\
+  FALSE "6" "Juju Plugins" "Collection of plugins created by various authors to make using Juju easier."\
   --separator=":" --width=750 --height=700)
 
 if [[ $answer =~ "1" ]]; then
@@ -38,6 +39,13 @@ fi
 
 if [[ $answer =~ "5" ]]; then
   sudo apt-get -y install charm-tools
+fi
+
+if [[ $answer =~ "6" ]]; then
+  sudo apt-get -y install git python-jujuclient
+  sudo git clone https://github.com/juju/plugins.git ~/.juju-plugins
+  echo 'PATH=$PATH:$HOME/.juju-plugins' >> ~/.bash_profile
+  source ~/.bash_profile
 fi
 
 # Clean up
