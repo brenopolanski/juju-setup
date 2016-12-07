@@ -9,7 +9,8 @@ answer=$(zenity  --list  --text "Choose the packages you want to install." --che
   TRUE "1" "Juju" ""\
   TRUE "2" "LXD" "A hypervisor for LXC, providing fast, secure containers."\
   TRUE "3" "ZFS Utils" "A highly efficient and feature-rich filesystem and logical volume manager."\
-  FALSE "4" "Charm Tools" "The Charm Tools Juju Plugin is a collection of commands enabling users and charm authors to create, search, fetch, update, and manage charms."\
+  FALSE "4" "Create Juju environment variable" ""\
+  FALSE "5" "Charm Tools" "The Charm Tools Juju Plugin is a collection of commands enabling users and charm authors to create, search, fetch, update, and manage charms."\
   --separator=":" --width=750 --height=700)
 
 if [[ $answer =~ "1" ]]; then
@@ -31,6 +32,12 @@ if [[ $answer =~ "3" ]]; then
 fi
 
 if [[ $answer =~ "4" ]]; then
+  echo 'export JUJU_REPOSITORY=/home/juju/charms' >> ~/.bashrc
+  echo 'export LAYER_PATH=$JUJU_REPOSITORY/layers' >> ~/.bashrc
+  echo 'export INTERFACE_PATH=$JUJU_REPOSITORY/interfaces' >> ~/.bashrc
+fi
+
+if [[ $answer =~ "5" ]]; then
   sudo apt-get -y install charm-tools
 fi
 
