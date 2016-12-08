@@ -22,13 +22,13 @@ if [[ $answer =~ "1" ]]; then
 fi
 
 if [[ $answer =~ "2" ]]; then
-  sudo apt-get -y install zfsutils-linux
-fi
-
-if [[ $answer =~ "3" ]]; then
   sudo apt-get -y install lxd
   sudo newgrp lxd
   sudo lxd init
+fi
+
+if [[ $answer =~ "3" ]]; then
+  sudo apt-get -y install zfsutils-linux
 fi
 
 if [[ $answer =~ "4" ]]; then
