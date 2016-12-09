@@ -32,9 +32,10 @@ if [[ $answer =~ "3" ]]; then
 fi
 
 if [[ $answer =~ "4" ]]; then
-  echo 'export JUJU_REPOSITORY=/home/juju/charms' >> ~/.bashrc
+  echo 'export JUJU_REPOSITORY=$HOME/charms' >> ~/.bashrc
   echo 'export LAYER_PATH=$JUJU_REPOSITORY/layers' >> ~/.bashrc
   echo 'export INTERFACE_PATH=$JUJU_REPOSITORY/interfaces' >> ~/.bashrc
+  sudo mkdir -p $LAYER_PATH $INTERFACE_PATH
 fi
 
 if [[ $answer =~ "5" ]]; then
